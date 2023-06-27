@@ -19,6 +19,8 @@ export default function Home() {
           Get started by editing <code>pages/index.js</code>
         </p>
 
+        <a href='google.com'>GOOGLE</a>
+
         <div className={styles.grid}>
           <a href='https://nextjs.org/docs' className={styles.card}>
             <h3>Documentation &rarr;</h3>
