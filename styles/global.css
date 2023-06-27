@@ -11,8 +11,8 @@ body {
 }
 
 a {
-  color: red;
-  text-decoration: line-through;
+  color: #0070f3;
+  text-decoration: none;
 }
 
 a:hover {
