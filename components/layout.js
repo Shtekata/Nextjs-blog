@@ -44,7 +44,8 @@ export default function Layout({children, home}) {
                 className={utilStyles.borderCircle}
                 height={108}
                 width={108}
-                alt=''></Image>
+                alt=''
+              />
             </Link>
             <h2 className={utilStyles.headingLg}>
               <Link href='/' className={utilStyles.colorInherit}>
