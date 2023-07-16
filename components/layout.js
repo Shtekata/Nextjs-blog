@@ -7,7 +7,7 @@ import Link from 'next/link'
 const name = 'Shtekata'
 export const siteTitle = 'Next.js Sample Website'
 
-export default function Layout({children, home}) {
+export default function Layout({children, ho, change}) {
   return (
     <div className={styles.container}>
       <Head>
@@ -23,7 +23,7 @@ export default function Layout({children, home}) {
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
       <header className={styles.header}>
-        {home ? (
+        {ho ? (
           <>
             <Image
               priority
@@ -56,9 +56,11 @@ export default function Layout({children, home}) {
         )}
       </header>
       <main>{children}</main>
-      {!home && (
+      {!ho && (
         <div className={siteTitle.backToHome}>
-          <Link href='/'>← Back to home</Link>
+          <Link href='/' onClick={x => change()}>
+            ← Back to home
+          </Link>
         </div>
       )}
     </div>

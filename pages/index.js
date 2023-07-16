@@ -4,23 +4,18 @@ import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 
 let home = true
-console.log(`Start1: ${home}`)
-const change = y => {
-  console.log(`beforeChange: ${y}`)
-  y == true ? (y = false) : (y = true)
-  console.log(`afterChange: ${y}`)
-  return y
+const change = home => {
+  home == true ? (home = false) : (home = true)
+  return home
 }
-console.log(`Start2: ${home}`)
+
 export default function Home() {
   return (
     <>
-      {console.log(`comp1: ${home}`)}
       <Link href='' onClick={x => (home = change(home))}>
         home
       </Link>
-      {console.log(`comp2: ${home}`)}
-      <Layout home={home}>
+      <Layout ho={home} change>
         <Head>
           <title>{siteTitle}</title>
         </Head>
