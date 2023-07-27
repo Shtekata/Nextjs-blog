@@ -7,7 +7,7 @@ import Link from 'next/link'
 const name = 'Shtekata'
 export const siteTitle = 'Next.js Sample Website'
 
-export default function Layout({children, ho, change}) {
+export default function Layout({children, ho, ch}) {
   return (
     <div className={styles.container}>
       <Head>
@@ -58,7 +58,7 @@ export default function Layout({children, ho, change}) {
       <main>{children}</main>
       {!ho && (
         <div className={siteTitle.backToHome}>
-          <Link href='/' onClick={x => change()}>
+          <Link href='' onClick={x => ch()}>
             ← Back to home
           </Link>
         </div>

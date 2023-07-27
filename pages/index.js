@@ -6,19 +6,18 @@ import Alert from '../components/Alert'
 
 let home = true
 let type = 'success'
-const change = home => {
+const change = () => {
   home == true ? (home = false) : (home = true)
   type == 'success' ? (type = 'error') : (type = 'success')
-  return home
 }
 
 export default function Home() {
   return (
     <>
-      <Link href='' onClick={x => (home = change(home))}>
+      <Link href='' onClick={x => change()}>
         home
       </Link>
-      <Layout ho={home} change>
+      <Layout ho={home} ch={change}>
         <Head>
           <title>{siteTitle}</title>
         </Head>
