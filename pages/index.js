@@ -3,6 +3,12 @@ import Layout, {siteTitle} from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 import Alert from '../components/Alert'
+import {getSortedPostsData} from '../lib/posts'
+
+export async function getStaticProps() {
+  const allPostData = getSortedPostsData()
+  return {props: {allPostData}}
+}
 
 export let home = true
 let type = 'success'
@@ -11,7 +17,7 @@ export const change = () => {
   type == 'success' ? (type = 'error') : (type = 'success')
 }
 
-export default function Home() {
+export default function Home({allPostData}) {
   return (
     <>
       <Link href='' onClick={x => change()}>
@@ -33,6 +39,20 @@ export default function Home() {
               (This is a sample website - you'll be building a site like this on{' '}
               <a href='https://nextjs.org/learn'>our Next.js tutorial</a>.)
             </p>
+          </section>
+          <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+            <h2 className={utilStyles.headingLg}>Blog</h2>
+            <ul className={utilStyles.list}>
+              {allPostData.map(({id, date, title}) => (
+                <li className={utilStyles.listItem} key={id}>
+                  {title}
+                  <br />
+                  {id}
+                  <br />
+                  {date}
+                </li>
+              ))}
+            </ul>
           </section>
         </Alert>
       </Layout>
