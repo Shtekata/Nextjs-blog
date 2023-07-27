@@ -58,7 +58,7 @@ export default function Layout({children, ho, ch}) {
       <main>{children}</main>
       {!ho && (
         <div className={siteTitle.backToHome}>
-          <Link href='' onClick={x => ch()}>
+          <Link href='/' onClick={x => ch()}>
             ← Back to home
           </Link>
         </div>

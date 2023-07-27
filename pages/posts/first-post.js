@@ -1,10 +1,11 @@
 import Link from 'next/link'
 import Head from 'next/head'
 import Layout from '../../components/layout'
+import {change, home} from '..'
 
 export default function FirstPost() {
   return (
-    <Layout>
+    <Layout ch={change} ho={home}>
       <Head>
         <title>First Post</title>
       </Head>

@@ -4,9 +4,9 @@ import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 import Alert from '../components/Alert'
 
-let home = true
+export let home = true
 let type = 'success'
-const change = () => {
+export const change = () => {
   home == true ? (home = false) : (home = true)
   type == 'success' ? (type = 'error') : (type = 'success')
 }
@@ -17,6 +17,8 @@ export default function Home() {
       <Link href='' onClick={x => change()}>
         home
       </Link>
+      <br />
+      <Link href='/posts/first-post'>first-post</Link>
       <Layout ho={home} ch={change}>
         <Head>
           <title>{siteTitle}</title>
