@@ -6,8 +6,8 @@ import Alert from '../components/Alert'
 import {getSortedPostsData} from '../lib/posts'
 
 export async function getStaticProps() {
-  const allPostData = getSortedPostsData()
-  return {props: {allPostData}}
+  const allPostsData = getSortedPostsData()
+  return {props: {allPostsData}}
 }
 
 export let home = true
@@ -17,7 +17,7 @@ export const change = () => {
   type == 'success' ? (type = 'error') : (type = 'success')
 }
 
-export default function Home({allPostData}) {
+export default function Home({allPostsData}) {
   return (
     <>
       <Link href='' onClick={x => change()}>
@@ -25,6 +25,8 @@ export default function Home({allPostData}) {
       </Link>
       <br />
       <Link href='/posts/first-post'>first-post</Link>
+      <br />
+      <Link href='/posts/second-post'>second-post</Link>
       <Layout ho={home} ch={change}>
         <Head>
           <title>{siteTitle}</title>
@@ -43,7 +45,7 @@ export default function Home({allPostData}) {
           <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
             <h2 className={utilStyles.headingLg}>Blog</h2>
             <ul className={utilStyles.list}>
-              {allPostData.map(({id, date, title}) => (
+              {allPostsData.map(({id, date, title}) => (
                 <li className={utilStyles.listItem} key={id}>
                   {title}
                   <br />
