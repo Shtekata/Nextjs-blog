@@ -11,7 +11,7 @@ export async function getServerSideProps() {
   return {props: {allCommentsData}}
 }
 
-export default function FirstPost({allCommentsData}) {
+export default function Post({allCommentsData}) {
   return (
     <Layout ch={change} ho={home}>
       <Head>

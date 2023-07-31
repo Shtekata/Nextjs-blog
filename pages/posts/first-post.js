@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Layout from '../../components/layout'
 import {change, home} from '..'
 
-export default function FirstPost() {
+export default function Post() {
   return (
     <Layout ch={change} ho={home}>
       <Head>
