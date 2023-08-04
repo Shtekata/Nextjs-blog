@@ -24,9 +24,12 @@ export default function Home({allPostsData}) {
         home
       </Link>
       <br />
+      <br />
       <Link href='/posts/first-post'>first-post</Link>
       <br />
       <Link href='/posts/second-post'>second-post</Link>
+      <br />
+      <Link href='/posts/third-post'>third-post</Link>
       <Layout ho={home} ch={change}>
         <Head>
           <title>{siteTitle}</title>

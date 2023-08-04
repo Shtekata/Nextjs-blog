@@ -6,7 +6,7 @@ import {getSortedCommentsData} from '../../lib/comments'
 import utilStyles from '../../styles/utils.module.css'
 import Alert from '../../components/Alert'
 
-export async function getServerSideProps() {
+export async function getServerSideProps(context) {
   const allCommentsData = getSortedCommentsData()
   return {props: {allCommentsData}}
 }
