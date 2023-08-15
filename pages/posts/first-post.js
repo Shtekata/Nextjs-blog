@@ -10,6 +10,7 @@ export default function Post() {
   const [rollNumber, setRollNumber] = useState('')
   useEffect(() => {
     document.title = 'You clicked ' + count + ' times'
+    console.log(`You clicked ${count} times`)
   })
 
   function validateFormWithJS(event) {
@@ -74,6 +75,22 @@ export default function Post() {
         <label htmlFor='name2'>Name:</label>
         <br />
         <input onChange={event => setName(event.target.value)} value={name} type='text' name='name2' id='name2' />
+        <br />
+        <button type='submit'>Submit</button>
+      </form>
+      <br />
+      <form action='/'>
+        <label htmlFor='pswrd'>Password:</label>
+        <br />
+        <input
+          type='password'
+          id='pswrd'
+          name='pswrd'
+          pattern='[a-z0-9]{5,15}'
+          title='Password should be digits (0 to 9) or alphabets (a to z), minimum 5 symbols.'
+          autoComplete='current-password'
+          required
+        />
         <br />
         <button type='submit'>Submit</button>
       </form>
