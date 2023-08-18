@@ -32,7 +32,9 @@ export default function Home({allPostsData}) {
       <br />
       <Link href='/posts/third-post'>third-post</Link>
       <br />
-      <Link href='/form'>form</Link>
+      <Link href='/js-form'>js-form</Link>
+      <br />
+      <Link href='/no-js-form'>no-js-form</Link>
       <Layout ho={home} ch={change}>
         <Head>
           <title>{siteTitle}</title>
