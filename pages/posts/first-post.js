@@ -57,11 +57,25 @@ export default function Post() {
       <form action='/api/form' method='post'>
         <label htmlFor='first'>First name:</label>
         <br />
-        <input onChange={event => setFirst(event.target.value)} value={first} type='text' id='first' name='first' />
+        <input
+          onChange={event => setFirst(event.target.value)}
+          value={first}
+          type='text'
+          id='first'
+          name='first'
+          required
+        />
         <br />
         <label htmlFor='last'>Last name:</label>
         <br />
-        <input onChange={event => setLast(event.target.value)} value={last} type='text' id='last' name='last' />
+        <input
+          onChange={event => setLast(event.target.value)}
+          value={last}
+          type='text'
+          id='last'
+          name='last'
+          required
+        />
         <br />
         <button onClick={clearData} type='submit'>
           Submit

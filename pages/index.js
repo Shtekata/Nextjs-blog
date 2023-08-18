@@ -31,6 +31,8 @@ export default function Home({allPostsData}) {
       <Link href='/posts/second-post'>second-post</Link>
       <br />
       <Link href='/posts/third-post'>third-post</Link>
+      <br />
+      <Link href='/form'>form</Link>
       <Layout ho={home} ch={change}>
         <Head>
           <title>{siteTitle}</title>
