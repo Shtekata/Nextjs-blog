@@ -1,3 +1,1 @@
-export default function A() {
-  return {data: {name: 'Gosho', surname: 'Georgiev'}}
-}
+export default (req, res) => res.status(200).json({data: {name: 'Gosho', surname: 'Georgiev'}})

@@ -4,6 +4,7 @@ import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 import Alert from '../components/Alert'
 import {getSortedPostsData} from '../lib/posts'
+import {Route} from 'react-router-dom'
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()

@@ -3,11 +3,16 @@ import Head from 'next/head'
 import Layout from '../../components/layout'
 import {change, home} from '..'
 import React, {useState, useEffect} from 'react'
+import {useNavigate} from 'react-router-dom'
 
 export default function Post() {
   const [count, setCount] = useState(0)
   const [name, setName] = useState('')
   const [rollNumber, setRollNumber] = useState('')
+  const [first, setFirst] = useState('')
+  const [last, setLast] = useState('')
+  // const navigate = useNavigate()
+
   useEffect(() => {
     document.title = 'You clicked ' + count + ' times'
     console.log(`You clicked ${count} times`)
@@ -27,8 +32,20 @@ export default function Post() {
       alert('Roll number should be at least 3 digits long.')
       return
     }
+    // const dataToSubmit = {rollNumber, name}
     setName('')
     setRollNumber('')
+    // navigate('/api/form')
+  }
+
+  const clearData = e => {
+    console.log('mmm')
+    // e.preventDefault()
+    setTimeout(() => {
+      setFirst('A')
+      setLast('B')
+      console.log(first, last)
+    }, 5000)
   }
 
   return (
@@ -37,16 +54,18 @@ export default function Post() {
         <title>First Post</title>
       </Head>
       <h1>First Post</h1>
-      <form action='/' method='post'>
+      <form action='/api/form' method='post'>
         <label htmlFor='first'>First name:</label>
         <br />
-        <input type='text' id='first' name='first' />
+        <input onChange={event => setFirst(event.target.value)} value={first} type='text' id='first' name='first' />
         <br />
         <label htmlFor='last'>Last name:</label>
         <br />
-        <input type='text' id='last' name='last' />
+        <input onChange={event => setLast(event.target.value)} value={last} type='text' id='last' name='last' />
         <br />
-        <button type='submit'>Submit</button>
+        <button onClick={clearData} type='submit'>
+          Submit
+        </button>
       </form>
       <br />
       <form action='/' method='post'>
@@ -79,7 +98,7 @@ export default function Post() {
         <button type='submit'>Submit</button>
       </form>
       <br />
-      <form action='/'>
+      <form action='/api/form'>
         <label htmlFor='pswrd'>Password:</label>
         <br />
         <input
