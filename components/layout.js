@@ -56,11 +56,15 @@ export default function Layout({children, ho, ch}) {
         )}
       </header>
       <main>{children}</main>
+      <Link href='/' onClick={x => ch(false)}>
+        ← Back to home
+      </Link>
       {!ho && (
         <div className={siteTitle.backToHome}>
-          <Link href='/' onClick={x => ch()}>
-            ← Back to home
+          <Link href='/' onClick={x => ch(true)}>
+            ← Back to home and change state
           </Link>
+          <br />
         </div>
       )}
     </div>

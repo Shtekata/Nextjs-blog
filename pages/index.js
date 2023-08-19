@@ -13,16 +13,18 @@ export async function getStaticProps() {
 
 export let home = true
 let type = 'success'
-export const change = () => {
-  home == true ? (home = false) : (home = true)
-  type == 'success' ? (type = 'error') : (type = 'success')
+export const change = change => {
+  if (change == true) {
+    home == true ? (home = false) : (home = true)
+    type == 'success' ? (type = 'error') : (type = 'success')
+  }
 }
 
 export default function Home({allPostsData}) {
   return (
     <>
-      <Link href='' onClick={x => change()}>
-        home
+      <Link href='' onClick={x => change(true)}>
+        change state
       </Link>
       <br />
       <br />
@@ -35,6 +37,10 @@ export default function Home({allPostsData}) {
       <Link href='/js-form'>js-form</Link>
       <br />
       <Link href='/no-js-form'>no-js-form</Link>
+      <br />
+      <Link href='/posts/ssg-ssr'>ssg-ssr</Link>
+      <br />
+      <Link href='/posts/pre-rendering'>pre-rendering</Link>
       <Layout ho={home} ch={change}>
         <Head>
           <title>{siteTitle}</title>
