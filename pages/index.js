@@ -26,11 +26,11 @@ export default function Home({allPostsData}) {
       </Link>
       <br />
       <br />
-      <Link href='/posts/first-post'>first-post</Link>
+      <Link href='/old-posts/first-post'>first-post</Link>
       <br />
-      <Link href='/posts/second-post'>second-post</Link>
+      <Link href='/old-posts/second-post'>second-post</Link>
       <br />
-      <Link href='/posts/third-post'>third-post</Link>
+      <Link href='/old-posts/third-post'>third-post</Link>
       <br />
       <Link href='/js-form'>js-form</Link>
       <br />
