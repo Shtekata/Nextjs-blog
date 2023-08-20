@@ -4,7 +4,7 @@ import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 import Alert from '../components/Alert'
 import {getSortedPostsData} from '../lib/posts'
-import {Route} from 'react-router-dom'
+import Date from '../components/date'
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
@@ -61,11 +61,13 @@ export default function Home({allPostsData}) {
             <ul className={utilStyles.list}>
               {allPostsData.map(({id, date, title}) => (
                 <li className={utilStyles.listItem} key={id}>
-                  {title}
-                  <br />
                   {id}
                   <br />
-                  {date}
+                  <Link href={`/posts/${id}`}>{title}</Link>
+                  <br />
+                  <small className={utilStyles.lightText}>
+                    <Date dateString={date} />
+                  </small>
                 </li>
               ))}
             </ul>

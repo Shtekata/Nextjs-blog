@@ -50,3 +50,8 @@
 .lightText {
     color: #666;
 }
+
+.pmargin {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
