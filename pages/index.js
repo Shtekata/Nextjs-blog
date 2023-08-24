@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Alert from '../components/Alert'
 import {getSortedPostsData} from '../lib/posts'
 import Date from '../components/date'
+import ActiveLink from '../components/ActiveLink'
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
@@ -41,6 +42,10 @@ export default function Home({allPostsData}) {
       <Link href='/posts/ssg-ssr'>ssg-ssr</Link>
       <br />
       <Link href='/posts/pre-rendering'>pre-rendering</Link>
+      <br />
+      <ActiveLink href='https://www.google.com'>ActiveLink-google.com</ActiveLink>
+      <ActiveLink href='/'>ActiveLink-home</ActiveLink>
+      <ActiveLink href='/page'>ActiveLink-page</ActiveLink>
       <Layout ho={home} ch={change}>
         <Head>
           <title>{siteTitle}</title>
