@@ -46,6 +46,7 @@ export default function Home({allPostsData}) {
       <ActiveLink href='https://www.google.com'>ActiveLink-google.com</ActiveLink>
       <ActiveLink href='/'>ActiveLink-home</ActiveLink>
       <ActiveLink href='/page'>ActiveLink-page</ActiveLink>
+      <ActiveLink href='/page2'>ActiveLink-page2</ActiveLink>
       <Layout ho={home} ch={change}>
         <Head>
           <title>{siteTitle}</title>
