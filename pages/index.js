@@ -43,13 +43,21 @@ export default function Home({allPostsData}) {
       <br />
       <Link href='/posts/pre-rendering'>pre-rendering</Link>
       <br />
-      <ActiveLink href='https://www.google.com'>ActiveLink-google.com</ActiveLink>
+      <ActiveLink href='https://www.google.com' color='green'>
+        ActiveLink-google.com
+      </ActiveLink>
       <ActiveLink href='/'>ActiveLink-home</ActiveLink>
-      <ActiveLink href='/page'>ActiveLink-page</ActiveLink>
-      <ActiveLink href='/page2'>ActiveLink-page2</ActiveLink>
+      <ActiveLink href='/page' color='blue'>
+        ActiveLink-page
+      </ActiveLink>
+      <ActiveLink href='/page2' color='brown'>
+        ActiveLink-page2
+      </ActiveLink>
       <ActiveLink href='/one' color='violet'>
         ActiveLink-one
       </ActiveLink>
+      <br />
+      <Link href='/post'>Post</Link>
       <Layout ho={home} ch={change}>
         <Head>
           <title>{siteTitle}</title>

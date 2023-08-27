@@ -1,15 +1,18 @@
 import Link from 'next/link'
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import {useRouter} from 'next/router'
 
-export default function Page({mostData}) {
+export default function Page({data}) {
   const router = useRouter()
   const [count, setCount] = useState(0)
+
+  // useEffect(() => setCount(0), [router.query.slug])
+
   return (
     <div>
       <h1>Page: {router.query.slug}</h1>
       <p>Count: {count}</p>
-      <p>params.name: {mostData.name}</p>
+      <p>params.name: {data.name}</p>
       <button onClick={() => setCount(count + 1)}>Increase count</button>
       <br />
       <Link href='/one'>one</Link>
@@ -32,6 +35,6 @@ export function getStaticPaths() {
 }
 
 export function getStaticProps({params}) {
-  const mostData = {name: params.slug}
-  return {props: {mostData}}
+  const data = {name: params.slug}
+  return {props: {data}}
 }
