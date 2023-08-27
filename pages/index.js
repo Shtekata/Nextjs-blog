@@ -61,6 +61,8 @@ export default function Home({allPostsData}) {
       </ActiveLink>
       <br />
       <Link href='/post'>Post</Link>
+      <br />
+      <Link href='/popState'>popState</Link>
       <Layout ho={home} ch={change}>
         <Head>
           <title>{siteTitle}</title>

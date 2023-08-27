@@ -39,6 +39,9 @@ export default function Login() {
         <button type='submit'>Login</button>
       </form>
       <Link href='/'>Home</Link>
+      <h3>
+        <Link href='/popState'>popState</Link>
+      </h3>
     </>
   )
 }
