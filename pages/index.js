@@ -35,6 +35,9 @@ export default function Home({allPostsData}) {
       <br />
       <Link href='/old-posts/third-post'>third-post</Link>
       <br />
+      <Link href='/old-posts/fourth-post'>fourth-post</Link>
+      <br />
+      <br />
       <Link href='/js-form'>js-form</Link>
       <br />
       <Link href='/no-js-form'>no-js-form</Link>

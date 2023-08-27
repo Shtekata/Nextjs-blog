@@ -14,6 +14,9 @@ export default function Post({post}) {
         <title>{post ? post.title : 'Hello'}</title>
       </Head>
       <Link href='/post'>Back to Post</Link>
+      <h2>
+        <Link href='/old-posts/second-post'>Back to 'Second Post'</Link>
+      </h2>
       <br />
       <ReadMore post={post} />
       <article>
