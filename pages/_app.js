@@ -16,13 +16,13 @@ export default function App({Component, pageProps}) {
   //   }
   // }, [router])
 
-  useEffect(() => {
-    const handleRouteChangeError = (err, url) => {
-      if (err.cancelled) console.log(`Route to ${url} was cancelled`)
-    }
-    router.events.on('routeChangeError', handleRouteChangeError)
-    return () => router.events.off('routeChangeError', handleRouteChangeError)
-  }, [router])
+  // useEffect(() => {
+  //   const handleRouteChangeError = (err, url) => {
+  //     if (err.cancelled) console.log(`Route to ${url} was cancelled`)
+  //   }
+  //   router.events.on('routeChangeError', handleRouteChangeError)
+  //   return () => router.events.off('routeChangeError', handleRouteChangeError)
+  // }, [router])
 
   // return <Component key={router.asPath} {...pageProps} />
   return <Component {...pageProps} />

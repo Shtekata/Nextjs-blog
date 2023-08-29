@@ -1,5 +1,5 @@
 import Layout from '../../components/layout'
-import {getAllPostPids, getPostData} from '../../lib/post'
+import {getAllPostNames, getPostData} from '../../lib/post'
 import {change, home} from '..'
 import Head from 'next/head'
 import Date from '../../components/date'
@@ -35,7 +35,8 @@ export default function Post({post}) {
 }
 
 export async function getStaticPaths() {
-  const paths = getAllPostPids()
+  // const paths = getAllPostPids()
+  const paths = await getAllPostNames()
   return {
     paths,
     fallback: false,
