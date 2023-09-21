@@ -7,7 +7,7 @@ export default function Login() {
   const handleSubmit = useCallback(e => {
     e.preventDefault()
     const data = {firstName: e.target.firstName.value, lastName: e.target.lastName.value}
-    const result = fetch('/api/login', {
+    fetch('/api/login', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify(data),

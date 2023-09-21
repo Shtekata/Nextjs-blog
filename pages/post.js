@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import ReadMore from '../components/ReadMore'
 import {useRouter} from 'next/router'
+import ButtonDynamic from '../components/Button-dynamic'
 
 export default () => {
   const router = useRouter()
@@ -17,6 +18,7 @@ export default () => {
       <h1>
         <Link href='/post/789_Ala-bala-cica'>789_Ala-bala-cica</Link>
         <ReadMore post={{id: '789_Ala-bala-cica'}} />
+        <Link href='/post/789_Ala-bala-cica'>{<ButtonDynamic text='789_Ala-bala-cica' />}</Link>
       </h1>
       <h3>
         <Link href='/'>Home</Link>
